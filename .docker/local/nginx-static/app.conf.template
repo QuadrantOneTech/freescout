@@ -1,0 +1,25 @@
+server {
+    listen $NGINX_APP_PORT;
+    server_name $NGINX_APP_DOMAIN;
+
+    root /app/public;
+    index index.php;
+
+    error_log /dev/stdout;
+    access_log /dev/stdout;
+
+    location / {
+        try_files $uri /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass $NGINX_APP_PHP_FPM; # Или путь к вашему сокету PHP
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_index index.php;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}

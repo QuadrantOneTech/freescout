@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4
+class ComposerStaticInit7141db27a00e7f240cd9de549b13312e
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -1973,7 +1973,20 @@ class ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4
         'HTMLPurifier_VarParser_Flexible' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier/VarParser/Flexible.php',
         'HTMLPurifier_VarParser_Native' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier/VarParser/Native.php',
         'HTMLPurifier_Zipper' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier/Zipper.php',
+        'Html2Text\\BasicTest' => __DIR__ . '/..' . '/html2text/html2text/test/BasicTest.php',
+        'Html2Text\\BlockquoteTest' => __DIR__ . '/..' . '/html2text/html2text/test/BlockquoteTest.php',
+        'Html2Text\\ConstructorTest' => __DIR__ . '/..' . '/html2text/html2text/test/ConstructorTest.php',
+        'Html2Text\\DefinitionListTest' => __DIR__ . '/..' . '/html2text/html2text/test/DefinitionListTest.php',
         'Html2Text\\Html2Text' => __DIR__ . '/..' . '/html2text/html2text/src/Html2Text.php',
+        'Html2Text\\HtmlCharsTest' => __DIR__ . '/..' . '/html2text/html2text/test/HtmlCharsTest.php',
+        'Html2Text\\ImageTest' => __DIR__ . '/..' . '/html2text/html2text/test/ImageTest.php',
+        'Html2Text\\LinkTest' => __DIR__ . '/..' . '/html2text/html2text/test/LinkTest.php',
+        'Html2Text\\ListTest' => __DIR__ . '/..' . '/html2text/html2text/test/ListTest.php',
+        'Html2Text\\PreTest' => __DIR__ . '/..' . '/html2text/html2text/test/PreTest.php',
+        'Html2Text\\PrintTest' => __DIR__ . '/..' . '/html2text/html2text/test/PrintTest.php',
+        'Html2Text\\SearchReplaceTest' => __DIR__ . '/..' . '/html2text/html2text/test/SearchReplaceTest.php',
+        'Html2Text\\SpanTest' => __DIR__ . '/..' . '/html2text/html2text/test/SpanTest.php',
+        'Html2Text\\TableTest' => __DIR__ . '/..' . '/html2text/html2text/test/TableTest.php',
         'Illuminate\\Auth\\Access\\AuthorizationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/AuthorizationException.php',
         'Illuminate\\Auth\\Access\\Gate' => __DIR__ . '/../..' . '/overrides/laravel/framework/src/Illuminate/Auth/Access/Gate.php',
         'Illuminate\\Auth\\Access\\HandlesAuthorization' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/HandlesAuthorization.php',
@@ -4122,7 +4135,11 @@ class ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4
         'TorMorten\\Eventy\\Filter' => __DIR__ . '/../..' . '/overrides/tormjens/eventy/src/Filter.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'Underscore\\Dispatch' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Dispatch.php',
+        'Underscore\\DispatchTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/DispatchTest.php',
+        'Underscore\\Dummies\\DummyClass' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Dummies/DummyClass.php',
+        'Underscore\\Dummies\\DummyDefault' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Dummies/DummyDefault.php',
         'Underscore\\Method' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Method.php',
+        'Underscore\\MethodTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/MethodTest.php',
         'Underscore\\Methods\\ArraysMethods' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Methods/ArraysMethods.php',
         'Underscore\\Methods\\CollectionMethods' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Methods/CollectionMethods.php',
         'Underscore\\Methods\\FunctionsMethods' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Methods/FunctionsMethods.php',
@@ -4130,13 +4147,21 @@ class ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4
         'Underscore\\Methods\\ObjectMethods' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Methods/ObjectMethods.php',
         'Underscore\\Methods\\StringsMethods' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Methods/StringsMethods.php',
         'Underscore\\Parse' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Parse.php',
+        'Underscore\\ParseTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/ParseTest.php',
         'Underscore\\Traits\\Repository' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Traits/Repository.php',
         'Underscore\\Types\\Arrays' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Types/Arrays.php',
+        'Underscore\\Types\\ArraysTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Types/ArraysTest.php',
         'Underscore\\Types\\Functions' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Types/Functions.php',
+        'Underscore\\Types\\FunctionsTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Types/FunctionsTest.php',
         'Underscore\\Types\\Number' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Types/Number.php',
+        'Underscore\\Types\\NumberTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Types/NumberTest.php',
         'Underscore\\Types\\Object' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Types/Object.php',
+        'Underscore\\Types\\ObjectTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Types/ObjectTest.php',
+        'Underscore\\Types\\StringTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/Types/StringTest.php',
         'Underscore\\Types\\Strings' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Types/Strings.php',
         'Underscore\\Underscore' => __DIR__ . '/..' . '/anahkiasen/underscore-php/src/Underscore.php',
+        'Underscore\\UnderscoreTest' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/UnderscoreTest.php',
+        'Underscore\\UnderscoreTestCase' => __DIR__ . '/..' . '/anahkiasen/underscore-php/tests/UnderscoreTestCase.php',
         'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
         'Watson\\Rememberable\\Query\\Builder' => __DIR__ . '/..' . '/watson/rememberable/src/Query/Builder.php',
         'Watson\\Rememberable\\Rememberable' => __DIR__ . '/..' . '/watson/rememberable/src/Rememberable.php',
@@ -4227,11 +4252,11 @@ class ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitbf8dc242a640d7c740f283f226d0bdb4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7141db27a00e7f240cd9de549b13312e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7141db27a00e7f240cd9de549b13312e::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit7141db27a00e7f240cd9de549b13312e::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7141db27a00e7f240cd9de549b13312e::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7141db27a00e7f240cd9de549b13312e::$classMap;
 
         }, null, ClassLoader::class);
     }
