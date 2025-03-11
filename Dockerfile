@@ -57,7 +57,9 @@ COPY --chown=nonroot:nonroot . .
 
 RUN ls -al && \
     COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --optimize-autoloader --no-interaction --no-dev && \
-    rm -rf auth.json /tmp/* ~/.composer .docker
+    rm -rf auth.json /tmp/* ~/.composer .docker && \
+    php artisan freescout:build && \
+    php artisan storage:link
 
 ENTRYPOINT [ "docker-php-entrypoint.sh" ]
 

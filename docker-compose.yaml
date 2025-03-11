@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   nginx-static:
     image: 989570211471.dkr.ecr.us-east-2.amazonaws.com/docker-images/nginx-static:commit-371c46e0
@@ -33,6 +31,8 @@ services:
       REDIS_HOST: "redis"
       REDIS_PORT: "6379"
       REDIS_CLIENT: "predis"
+      CACHE_DRIVER: "redis"
+      SESSION_DRIVER: "redis"
     volumes:
       - ./:/app
       - ./.docker/local/php-fpm/custom_php.ini:/usr/local/etc/php/conf.d/custom-php-config.ini
