@@ -30,6 +30,9 @@ services:
       DB_PASSWORD: "freescout_password"
       APP_KEY: "base64:K4n18z1FVGhtR+52yhye0pynyBbaWB7DXv2old6/+X4="
       APP_ENV: "production"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      REDIS_CLIENT: "predis"
     volumes:
       - ./:/app
       - ./.docker/local/php-fpm/custom_php.ini:/usr/local/etc/php/conf.d/custom-php-config.ini
@@ -47,6 +50,12 @@ services:
       MYSQL_DATABASE: "freescout"
       MYSQL_USER: "freescout_user"
       MYSQL_PASSWORD: "freescout_password"
+
+  redis:
+      image: redis:7.4.2
+      volumes:
+          - redis_data:/data
+      stop_signal: SIGKILL
 
 volumes:
   mysql_data:
