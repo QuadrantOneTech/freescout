@@ -10,6 +10,7 @@ services:
     volumes:
       - ./.docker/local/nginx-static/app.conf.template:/etc/nginx/templates/app.conf.template
       - ./public:/app/public
+      - ./storage:/app/storage
     stop_signal: SIGKILL
 
   php-fpm:

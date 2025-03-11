@@ -29,11 +29,15 @@ RUN set -eo && \
         zlib \
         zlib-dev \
         libzip-dev \
+        libpng-dev \
+        libjpeg-turbo-dev \
+        freetype-dev \
         linux-headers \
         openssl \
         openssl-dev \
         tzdata && \
-    docker-php-ext-install zip xml imap mysqli pdo_mysql pdo && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-install zip xml imap mysqli pdo_mysql pdo gd && \
 #    # Install mailparse via PECL
 #    pecl install mailparse redis && \
 #    docker-php-ext-enable mailparse redis && \
