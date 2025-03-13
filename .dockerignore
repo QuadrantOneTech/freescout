@@ -36,3 +36,5 @@ Thumbs.db
 .phpunit.result.cache
 /.phpunit.cache
 vendor
+
+storage/app/public/*
