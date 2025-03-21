@@ -17,23 +17,27 @@ services:
     build:
       context: .
       args:
-        USER_ID: "1000"
-        GROUP_ID: "1000"
-    environment:
-      APP_URL: "http://freescout.loc"
-      DB_CONNECTION: mysql
-      DB_HOST: mysql
-      DB_PORT: 3306
-      DB_DATABASE: "freescout"
-      DB_USERNAME: "freescout_user"
-      DB_PASSWORD: "freescout_password"
-      APP_KEY: "base64:K4n18z1FVGhtR+52yhye0pynyBbaWB7DXv2old6/+X4="
-      APP_ENV: "production"
-      REDIS_HOST: "redis"
-      REDIS_PORT: "6379"
-      REDIS_CLIENT: "predis"
-      CACHE_DRIVER: "redis"
-      SESSION_DRIVER: "redis"
+        USER_ID: ${BUILD_USER_ID}
+        GROUP_ID: ${BUILD_GROUP_ID}
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+      - ./.docker/local/php-fpm/custom_php.ini:/usr/local/etc/php/conf.d/custom-php-config.ini
+    stop_signal: SIGKILL
+
+  php-cron:
+    build:
+      context: .
+      args:
+        USER_ID: ${BUILD_USER_ID}
+        GROUP_ID: ${BUILD_GROUP_ID}
+    env_file:
+      - .env
+    entrypoint: /usr/local/bin/supercronic
+    command:
+      - "-overlapping"
+      - "/etc/crontabs/nonroot"
     volumes:
       - ./:/app
       - ./.docker/local/php-fpm/custom_php.ini:/usr/local/etc/php/conf.d/custom-php-config.ini

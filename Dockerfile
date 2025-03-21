@@ -14,6 +14,7 @@ COPY --from=composer:2.2.23 /usr/bin/composer /usr/bin/composer
 COPY .docker/etc/msmtprc /etc/msmtprc
 COPY .docker/docker-php-entrypoint.sh /usr/local/bin/docker-php-entrypoint.sh
 COPY .docker/docker-entrypoint.d /docker-entrypoint.d
+COPY .docker/etc/crontabs/nonroot /etc/crontabs/nonroot
 
 RUN set -eo && \
     export PHP_AUTOCONF=$(which autoconf) && \
@@ -38,9 +39,6 @@ RUN set -eo && \
         tzdata && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install zip xml imap mysqli pdo_mysql pdo gd && \
-#    # Install mailparse via PECL
-#    pecl install mailparse redis && \
-#    docker-php-ext-enable mailparse redis && \
     docker-php-ext-configure imap --with-kerberos --with-imap-ssl && \
     addgroup --gid $GROUP_ID nonroot && \
     adduser --uid $USER_ID --ingroup nonroot --shell /bin/sh --no-create-home --disabled-password nonroot && \
@@ -51,7 +49,10 @@ RUN set -eo && \
     rm -rf /tmp/* && \
     chmod 0600 /etc/msmtprc && \
     chown nonroot: /etc/msmtprc && \
-    chmod 0755 /usr/local/bin/docker-php-entrypoint.sh /docker-entrypoint.d/*
+    chmod 0755 /usr/local/bin/docker-php-entrypoint.sh /docker-entrypoint.d/* && \
+    chmod 0644 /etc/crontabs/nonroot && \
+    wget https://github.com/aptible/supercronic/releases/download/v0.2.26/supercronic-linux-amd64 -O /usr/local/bin/supercronic && \
+    chmod +x /usr/local/bin/supercronic
 
 USER nonroot:nonroot
 
@@ -62,7 +63,6 @@ COPY --chown=nonroot:nonroot . .
 RUN ls -al && \
     COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --optimize-autoloader --no-interaction --no-dev && \
     rm -rf auth.json /tmp/* ~/.composer .docker && \
-    php artisan freescout:build && \
     php artisan storage:link
 
 ENTRYPOINT [ "docker-php-entrypoint.sh" ]
