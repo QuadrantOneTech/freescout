@@ -1,0 +1,25 @@
+{
+    "name": "freescout/oauthlogin",
+    "description": "",
+    "authors": [
+        {
+            "name": "FreeScout",
+            "email": "support@freescout.net"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\OauthLogin\\Providers\\OauthLoginServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\OauthLogin\\": ""
+        }
+    }
+}

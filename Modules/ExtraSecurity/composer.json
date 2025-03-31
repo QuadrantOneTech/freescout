@@ -1,0 +1,25 @@
+{
+    "name": "freescout/extrasecurity",
+    "description": "",
+    "authors": [
+        {
+            "name": "FreeScout",
+            "email": "support@freescout.net"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\ExtraSecurity\\Providers\\ExtraSecurityServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ExtraSecurity\\": ""
+        }
+    }
+}

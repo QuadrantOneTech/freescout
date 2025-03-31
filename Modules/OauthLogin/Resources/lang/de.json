@@ -1,0 +1,19 @@
+{
+    "Add Provider": "Anbieter hinzufügen",
+    "Authentication error: :error": "Anmeldefehler: :error",
+    "Auto-Create Users": "User automatisch anlegen",
+    "Automatically create non-existing users in FreeScout upon successful login to OAuth provider.": "Automatisches Anlegen von nicht existierenden Benutzern in FreeScout nach erfolgreicher Anmeldung beim OAuth-Anbieter.",
+    "Comma separated list of field mappings in the following format: oauth_user_field>>freescout_user_field. Available FreeScout user fields: name, email, photo, job_title, phone": "Kommagetrennte Liste von Feldzuordnungen im folgenden Format: oauth_user_Feld>>freescout_user_Feld. Verfügbare FreeScout-Benutzerfelder:  name, email, photo, job_title, phone",
+    "Could not obtain Access Token from OAuth Provider": "Konnte kein Access Token vom OAuth Anbieter erhalten",
+    "Custom OAuth Provider": "Benutzerdefinierter OAuth-Anbieter",
+    "Debug Mode": "Debug-Modus",
+    "Disable standard login form and require to login using default OAuth Provider.": "Standard-Anmeldung deaktivieren und Anmeldung über den Standard-OAuth-Provider verlangen.",
+    "Enable debug mode to see more info in :%a_begin%Manage » Logs » OAuth:%a_end%.": "Debug-Modus aktivieren um mehr Informationen zu sehen in :%a_begin%Manage » Logs » OAuth:%a_end%.",
+    "Error occurred creating a user.": "Beim Anlegen eines Benutzers ist ein Fehler aufgetreten.",
+    "Error occurred obtaining user data": "Fehler beim Abrufen von Benutzerdaten aufgetreten",
+    "Force OAuth Login": "OAuth-Anmeldung erzwingen",
+    "OAuth Providers": "OAuth-Anbieter",
+    "Provider": "Anbieter",
+    "Sign in with :provider_name": "Anmelden mit :provider_name",
+    "User not found: :email": "Benutzer nicht gefunden: :email"
+}
